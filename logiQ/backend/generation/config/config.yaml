@@ -1,0 +1,258 @@
+# 最终最简配置（含 Planner / Intents / 模板）
+# 约定：
+# - 题型：trueFalse(TF)=2 选；singleChoice(SC)=4(固定1个正确)；multipleChoice(MC)=4(正确数由 sampler 在 {2,3} 中抽样，但题干不写数量)
+# - Intent 负责：option_kind + 正误池映射 + 各题型模板
+# - 难度只作用在“内容生成”：变量个数、最大深度、可用联结词、（可用模板、推理链步数分布）
+
+difficulty_profiles:
+  easy:
+    vars_dist:        { 2: 0.8, 3: 0.2 }
+    depth_dist:   { 2: 0.8, 3: 0.2 }
+    allowed_ops:      ["NOT", "AND", "OR", "IMP", "IFF"]
+  medium:
+    vars_dist:        { 2: 0.2, 3: 0.6, 4: 0.2 }
+    depth_dist:   { 2: 0.2, 3: 0.6, 4: 0.2 }
+    allowed_ops:      ["NOT", "AND", "OR", "IMP", "IFF"]
+  hard:
+    vars_dist:        { 3: 0.2, 4: 0.8 }
+    depth_dist:   { 3: 0.2, 4: 0.8 }
+    allowed_ops:      ["NOT", "AND", "OR", "IMP", "IFF"]
+
+planner:
+  # 全局难度权重（当请求未指定难度时使用）
+  difficulty_weights:
+    easy: 0.33
+    medium: 0.34
+    hard: 0.33
+
+  # 难度 → 题型权重
+  type_weights:
+    easy:   { trueFalse: 0.40, singleChoice: 0.45, multipleChoice: 0.15 }
+    medium: { trueFalse: 0.25, singleChoice: 0.45, multipleChoice: 0.30 }
+    hard:   { trueFalse: 0.15, singleChoice: 0.35, multipleChoice: 0.50 }
+
+  # 难度 → 类别权重
+  category_weights:
+    easy:   { truthTable: 0.50, equivalence: 0.35, inference: 0.15 }
+    medium: { truthTable: 0.40, equivalence: 0.35, inference: 0.25 }
+    hard:   { truthTable: 0.30, equivalence: 0.35, inference: 0.35 }
+
+  # 难度 × 类别 → 问法（Intent）权重
+  intent_weights:
+    truthTable:
+      easy:   { TT_TRUE_ASSIGNMENTS: 0.60, TT_FALSE_ASSIGNMENTS: 0.20, TT_EVAL_AT_ASSIGNMENT: 0.20 }
+      medium: { TT_TRUE_ASSIGNMENTS: 0.45, TT_FALSE_ASSIGNMENTS: 0.25, TT_EVAL_AT_ASSIGNMENT: 0.30 }
+      hard:   { TT_TRUE_ASSIGNMENTS: 0.35, TT_FALSE_ASSIGNMENTS: 0.25, TT_EVAL_AT_ASSIGNMENT: 0.40 }
+    equivalence:
+      easy:   { EQ_EQUIVALENT: 0.70, EQ_NONEQUIVALENT: 0.20, EQ_PAIR_TF: 0.10 }
+      medium: { EQ_EQUIVALENT: 0.55, EQ_NONEQUIVALENT: 0.25, EQ_PAIR_TF: 0.20 }
+      hard:   { EQ_EQUIVALENT: 0.40, EQ_NONEQUIVALENT: 0.35, EQ_PAIR_TF: 0.25 }
+    inference:
+      easy:   { INF_DERIVABLE: 0.70, INF_VALIDITY_TF: 0.30 }
+      medium: { INF_DERIVABLE: 0.60, INF_UNDERIVABLE: 0.20, INF_VALIDITY_TF: 0.20 }
+      hard:   { INF_DERIVABLE: 0.50, INF_UNDERIVABLE: 0.30, INF_VALIDITY_TF: 0.20 }
+
+  # MC 正确项数量分布（题干不写数量，但内部按此抽样生成）
+  mc_correct_count_dist:
+    easy:   { 2: 0.8, 3: 0.2 }
+    medium: { 2: 0.8, 3: 0.2 }
+    hard:   { 2: 0.4, 3: 0.6 }
+
+
+
+# 意图契约：option_kind + 各题型下的正确/干扰池映射 + 模板
+# pools 约定：
+#   truthTable: TrueSet / FalseSet（赋值）
+#   equivalence: EquivPool / NonEquivPool（公式）
+#   inference: ValidConclusions / InvalidConclusions（结论）
+intents:
+  # Truth Table
+  TT_TRUE_ASSIGNMENTS:
+    option_kind: assignment
+    pool_mapping:
+      sc:
+        correct: TrueSet
+        distractor: FalseSet
+      mc:
+        correct: TrueSet
+        distractor: FalseSet
+      tf: {}
+    templates:
+      sc:
+        - "Which of the following assignments makes the formula {F} true?"
+        - "Select the assignment under which {F} holds."
+        - "Choose the option that satisfies {F}."
+      mc:
+        - "Which of the following assignments make the formula {F} true?"
+        - "Select all assignments that satisfy {F}."
+        - "Under which of these assignments does {F} evaluate to true?"
+      tf: []
+  TT_FALSE_ASSIGNMENTS:
+    option_kind: assignment
+    pool_mapping:
+      sc:
+        correct: FalseSet
+        distractor: TrueSet
+      mc:
+        correct: FalseSet
+        distractor: TrueSet
+      tf: {}
+    templates:
+      sc:
+        - "Which of the following assignments makes the formula {F} false?"
+        - "Select the assignment under which {F} does not hold."
+        - "Choose the option that causes {F} to evaluate to false."
+      mc:
+        - "Which of the following assignments make the formula {F} false?"
+        - "Select all assignments under which {F} fails."
+        - "Under which of these assignments does {F} evaluate to false?"
+      tf: []
+  TT_EVAL_AT_ASSIGNMENT:
+    option_kind: pair         # stem gives (F, α), choose True/False
+    pool_mapping:
+      sc:
+        correct: TrueSet
+        distractor: FalseSet
+      mc:
+        correct: TrueSet
+        distractor: FalseSet
+      tf:
+        correct: TrueSet
+        distractor: FalseSet
+    templates:
+      sc: []
+      mc: []
+      tf:
+        - "Given assignment α: {alpha}. Determine whether {F} is true under this assignment."
+        - "Under α = {alpha}, is the formula {F} satisfied?"
+        - "Evaluate {F} with assignment {alpha}: true or false?"
+
+  # Equivalence
+  EQ_EQUIVALENT:
+    option_kind: formula
+    pool_mapping:
+      sc:
+        correct: EquivPool
+        distractor: NonEquivPool
+      mc:
+        correct: EquivPool
+        distractor: NonEquivPool
+      tf:
+        correct: EquivPool
+        distractor: NonEquivPool
+    templates:
+      sc:
+        - "Target formula: {T}. Which of the following is logically equivalent to it?"
+        - "Select the formula that is equivalent to {T}."
+        - "Which option has the same truth values as {T} under all assignments?"
+      mc:
+        - "Target formula: {T}. Which of the following formulas are logically equivalent to it?"
+        - "Select all formulas equivalent to {T}."
+        - "Which formulas yield the same truth values as {T} in every case?"
+      tf: []
+  EQ_NONEQUIVALENT:
+    option_kind: formula
+    pool_mapping:
+      sc:
+        correct: NonEquivPool
+        distractor: EquivPool
+      mc:
+        correct: NonEquivPool
+        distractor: EquivPool
+      tf:
+        correct: NonEquivPool
+        distractor: EquivPool
+    templates:
+      sc:
+        - "Target formula: {T}. Which of the following is not equivalent to it?"
+        - "Select the formula that is not logically equivalent to {T}."
+        - "Which option differs in truth values from {T}?"
+      mc:
+        - "Target formula: {T}. Which of the following are not equivalent to it?"
+        - "Select all formulas that are not equivalent to {T}."
+        - "Which formulas differ in truth values from {T}?"
+      tf: []
+  EQ_PAIR_TF:
+    option_kind: pair
+    pool_mapping:
+      sc:
+        correct: EquivPool
+        distractor: NonEquivPool
+      mc:
+        correct: EquivPool
+        distractor: NonEquivPool
+      tf:
+        correct: EquivPool
+        distractor: NonEquivPool
+    templates:
+      sc: []
+      mc: []
+      tf:
+        - "Decide whether the following two formulas are logically equivalent: {T} and {G}."
+        - "Are {T} and {G} equivalent under all assignments?"
+        - "Evaluate whether {T} is logically equivalent to {G}."
+
+  # Inference
+  INF_DERIVABLE:
+    option_kind: conclusion
+    pool_mapping:
+      sc:
+        correct: ValidConclusions
+        distractor: InvalidConclusions
+      mc:
+        correct: ValidConclusions
+        distractor: InvalidConclusions
+      tf:
+        correct: ValidConclusions
+        distractor: InvalidConclusions
+    templates:
+      sc:
+        - "Premise: {Premises}. Which of the following conclusions can be validly derived?"
+        - "Premise: {Premises}. Select the conclusion that follows logically."
+        - "Premise: {Premises}. Which conclusion can be correctly inferred?"
+      mc:
+        - "Premise: {Premises}. Which of the following conclusions can be validly derived?"
+        - "Premise: {Premises}. Select all conclusions that follow logically."
+        - "Premise: {Premises}. Which conclusions are logically entailed?"
+      tf: []
+  INF_UNDERIVABLE:
+    option_kind: conclusion
+    pool_mapping:
+      sc:
+        correct: InvalidConclusions
+        distractor: ValidConclusions
+      mc:
+        correct: InvalidConclusions
+        distractor: ValidConclusions
+      tf:
+        correct: InvalidConclusions
+        distractor: ValidConclusions
+    templates:
+      sc:
+        - "Premise: {Premises}. Which of the following conclusions cannot be derived?"
+        - "Premise: {Premises}. Select the conclusion that does not follow."
+        - "Premise: {Premises}. Which option is not a valid inference?"
+      mc:
+        - "Premise: {Premises}. Which of the following conclusions cannot be derived?"
+        - "Premise: {Premises}. Select all conclusions that are not valid consequences."
+        - "Premise: {Premises}. Which conclusions are not logically entailed?"
+      tf: []
+  INF_VALIDITY_TF:
+    option_kind: pair
+    pool_mapping:
+      sc:
+        correct: ValidConclusions
+        distractor: InvalidConclusions
+      mc:
+        correct: ValidConclusions
+        distractor: InvalidConclusions
+      tf:
+        correct: ValidConclusions
+        distractor: InvalidConclusions
+    templates:
+      sc: []
+      mc: []
+      tf:
+        - "Premise: {Premises}; Conclusion: {Conclusion}. Is this inference valid?"
+        - "Premise: {Premises}. Does the Conclusion: {Conclusion} follow logically?"
+        - "Conclusion: {Conclusion}. Given Premise: {Premises}. Evaluate whether the inference is valid."

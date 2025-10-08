@@ -1,0 +1,871 @@
+inference:
+  slot_fillers:
+    main:
+      use_var: 0.75
+      use_neg_var: 0.25
+    derived:
+      use_var: 0.35
+      use_neg_var: 0.15
+      use_and: 0.25
+      use_or: 0.25
+    aux:
+      use_var: 0.5
+      use_neg_var: 0.25
+  template_pairs:
+    - name: "modus_ponens"
+      description: "A→B, A ⇒ B"
+      chain_steps: 1
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+      premises:
+        - kind: "IMP"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "VAR"
+          name: "A"
+      valid:
+        - name: "modus_ponens"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+      invalid:
+        - name: "negate_conclusion"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "B" }
+        - name: "negate_premise"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+        - name: "contradiction_mix"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "B" }
+        - name: "equiv_with_negation"
+          conclusion:
+            kind: "IFF"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "B" }
+
+    - name: "modus_tollens"
+      description: "A→B, ¬B ⇒ ¬A"
+      chain_steps: 1
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+      premises:
+        - kind: "IMP"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "NOT"
+          left: { kind: "VAR", name: "B" }
+      valid:
+        - name: "modus_tollens"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+      invalid:
+        - name: "affirm_antecedent"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "affirm_consequent"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+        - name: "both_true"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "B" }
+        - name: "deny_implication"
+          conclusion:
+            kind: "NOT"
+            left:
+              kind: "IMP"
+              left: { kind: "VAR", name: "A" }
+              right: { kind: "VAR", name: "B" }
+
+    - name: "hypothetical_syllogism"
+      description: "A→B, B→C ⇒ A→C"
+      chain_steps: 1
+      slots:
+        A: { type: "main" }
+        B: { type: "main" }
+        C: { type: "derived" }
+      premises:
+        - kind: "IMP"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+      valid:
+        - name: "hypothetical_syllogism"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "C" }
+      invalid:
+        - name: "affirm_start"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "deny_end"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "C" }
+        - name: "reverse_chain"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "C" }
+            right: { kind: "VAR", name: "A" }
+        - name: "equivalence_instead"
+          conclusion:
+            kind: "IFF"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "C" }
+
+    - name: "conjunction_elimination"
+      description: "A∧B ⇒ A 或 B"
+      chain_steps: 1
+      slots:
+        A: { type: "main" }
+        B: { type: "aux" }
+      premises:
+        - kind: "AND"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+      valid:
+        - name: "conjunction_elimination_left"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "conjunction_elimination_right"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+      invalid:
+        - name: "negate_left"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+        - name: "negate_right"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "B" }
+        - name: "left_and_not_right"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "B" }
+        - name: "deny_disjunction"
+          conclusion:
+            kind: "NOT"
+            left:
+              kind: "OR"
+              left: { kind: "VAR", name: "A" }
+              right: { kind: "VAR", name: "B" }
+
+    - name: "biconditional_elimination"
+      description: "A↔B ⇒ (A→B) ∧ (B→A)"
+      chain_steps: 1
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+      premises:
+        - kind: "IFF"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+      valid:
+        - name: "biconditional_elimination"
+          conclusion:
+            kind: "AND"
+            left:
+              kind: "IMP"
+              left: { kind: "VAR", name: "A" }
+              right: { kind: "VAR", name: "B" }
+            right:
+              kind: "IMP"
+              left: { kind: "VAR", name: "B" }
+              right: { kind: "VAR", name: "A" }
+      invalid:
+        - name: "affirm_A"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "affirm_B"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+        - name: "A_and_not_B"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "B" }
+        - name: "deny_A_implies_B"
+          conclusion:
+            kind: "NOT"
+            left:
+              kind: "IMP"
+              left: { kind: "VAR", name: "A" }
+              right: { kind: "VAR", name: "B" }
+
+    - name: "biconditional_substitution"
+      description: "A↔B, A ⇒ B"
+      chain_steps: 1
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+      premises:
+        - kind: "IFF"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "VAR"
+          name: "A"
+      valid:
+        - name: "biconditional_substitution"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+      invalid:
+        - name: "negate_conclusion"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "B" }
+        - name: "negate_premise"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+        - name: "A_and_not_B"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "B" }
+        - name: "equiv_with_negation"
+          conclusion:
+            kind: "IFF"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "B" }
+
+    - name: "hypothetical_syllogism_modus_ponens"
+      description: "A→B, B→C, A ⇒ B, C"
+      chain_steps: 2
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+        C: { type: "derived" }
+      premises:
+        - kind: "IMP"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+        - kind: "VAR"
+          name: "A"
+      valid:
+        - name: "hs_mp_mid"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+        - name: "hs_mp_final"
+          conclusion:
+            kind: "VAR"
+            name: "C"
+      invalid:
+        - name: "negate_final"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "C" }
+        - name: "negate_start"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+        - name: "mid_and_not_final"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "B" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "C" }
+        - name: "start_implies_not_mid"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "B" }
+
+    - name: "disjunctive_syllogism_modus_ponens"
+      description: "A∨B, ¬A, B→C ⇒ B, C"
+      chain_steps: 2
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+        C: { type: "derived" }
+      premises:
+        - kind: "OR"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "NOT"
+          left: { kind: "VAR", name: "A" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+      valid:
+        - name: "ds_mp_mid"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+        - name: "ds_mp_final"
+          conclusion:
+            kind: "VAR"
+            name: "C"
+      invalid:
+        - name: "affirm_left"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "negate_final"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "C" }
+        - name: "flip_implication"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "C" }
+            right: { kind: "VAR", name: "A" }
+        - name: "mid_and_not_final"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "B" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "C" }
+
+    - name: "modus_tollens_chain"
+      description: "A→B, B→C, ¬C ⇒ ¬B, ¬A"
+      chain_steps: 2
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+        C: { type: "derived" }
+      premises:
+        - kind: "IMP"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+        - kind: "NOT"
+          left: { kind: "VAR", name: "C" }
+      valid:
+        - name: "mt_chain_mid"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "B" }
+        - name: "mt_chain_final"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+      invalid:
+        - name: "affirm_start"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "affirm_mid"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+        - name: "affirm_end"
+          conclusion:
+            kind: "VAR"
+            name: "C"
+        - name: "both_true_start_mid"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "B" }
+
+    - name: "nested_conditional_modus_ponens"
+      description: "A→(B→C), A, B ⇒ (B→C), C"
+      chain_steps: 2
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+        C: { type: "derived" }
+      premises:
+        - kind: "IMP"
+          left: { kind: "VAR", name: "A" }
+          right:
+            kind: "IMP"
+            left: { kind: "VAR", name: "B" }
+            right: { kind: "VAR", name: "C" }
+        - kind: "VAR"
+          name: "A"
+        - kind: "VAR"
+          name: "B"
+      valid:
+        - name: "nested_mp_mid"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "B" }
+            right: { kind: "VAR", name: "C" }
+        - name: "nested_mp_final"
+          conclusion:
+            kind: "VAR"
+            name: "C"
+      invalid:
+        - name: "negate_A"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+        - name: "negate_B"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "B" }
+        - name: "B_and_not_C"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "B" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "C" }
+        - name: "start_implies_not_B"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "B" }
+
+    - name: "biconditional_transitivity"
+      description: "A↔B, B↔C ⇒ A↔C"
+      chain_steps: 2
+      slots:
+        A: { type: "main" }
+        B: { type: "main" }
+        C: { type: "derived" }
+      premises:
+        - kind: "IFF"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "IFF"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+      valid:
+        - name: "biconditional_transitivity"
+          conclusion:
+            kind: "IFF"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "C" }
+      invalid:
+        - name: "affirm_A"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "affirm_C"
+          conclusion:
+            kind: "VAR"
+            name: "C"
+        - name: "equiv_with_negation"
+          conclusion:
+            kind: "IFF"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "C" }
+        - name: "A_and_not_C"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "C" }
+
+    - name: "biconditional_introduction"
+      description: "(A→B) ∧ (B→A) ⇒ A↔B"
+      chain_steps: 2
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+      premises:
+        - kind: "AND"
+          left:
+            kind: "IMP"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "B" }
+          right:
+            kind: "IMP"
+            left: { kind: "VAR", name: "B" }
+            right: { kind: "VAR", name: "A" }
+      valid:
+        - name: "biconditional_introduction"
+          conclusion:
+            kind: "IFF"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "B" }
+      invalid:
+        - name: "use_half_implication_A_to_B"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "B" }
+        - name: "use_half_implication_B_to_A"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "B" }
+            right: { kind: "VAR", name: "A" }
+        - name: "both_true"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "B" }
+        - name: "disjunction_instead"
+          conclusion:
+            kind: "OR"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "B" }
+
+    - name: "chained_modus_ponens"
+      description: "A→B, B→C, C→D, A ⇒ B, C, D"
+      chain_steps: 3
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+        C: { type: "derived" }
+        D: { type: "derived" }
+      premises:
+        - kind: "IMP"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "C" }
+          right: { kind: "VAR", name: "D" }
+        - kind: "VAR"
+          name: "A"
+      valid:
+        - name: "cmp_mid_B"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+        - name: "cmp_mid_C"
+          conclusion:
+            kind: "VAR"
+            name: "C"
+        - name: "cmp_final_D"
+          conclusion:
+            kind: "VAR"
+            name: "D"
+      invalid:
+        - name: "negate_mid_B"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "B" }
+        - name: "negate_final_D"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "D" }
+        - name: "C_and_not_D"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "C" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "D" }
+        - name: "start_implies_not_D"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "D" }
+
+    - name: "conjunction_chain_modus_ponens"
+      description: "A∧B, A→C, C→D ⇒ C, D"
+      chain_steps: 3
+      slots:
+        A: { type: "main" }
+        B: { type: "aux" }
+        C: { type: "derived" }
+        D: { type: "derived" }
+      premises:
+        - kind: "AND"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "C" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "C" }
+          right: { kind: "VAR", name: "D" }
+      valid:
+        - name: "ccmp_mid_C"
+          conclusion:
+            kind: "VAR"
+            name: "C"
+        - name: "ccmp_final_D"
+          conclusion:
+            kind: "VAR"
+            name: "D"
+      invalid:
+        - name: "negate_A"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+        - name: "negate_D"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "D" }
+        - name: "B_and_not_C"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "B" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "C" }
+        - name: "C_and_not_D"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "C" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "D" }
+
+    - name: "disjunctive_chain_modus_ponens"
+      description: "A∨B, ¬A, B→C, C→D ⇒ B, C, D"
+      chain_steps: 3
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+        C: { type: "derived" }
+        D: { type: "derived" }
+      premises:
+        - kind: "OR"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "NOT"
+          left: { kind: "VAR", name: "A" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "C" }
+          right: { kind: "VAR", name: "D" }
+      valid:
+        - name: "dcmp_mid_B"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+        - name: "dcmp_mid_C"
+          conclusion:
+            kind: "VAR"
+            name: "C"
+        - name: "dcmp_final_D"
+          conclusion:
+            kind: "VAR"
+            name: "D"
+      invalid:
+        - name: "affirm_left"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "negate_D"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "D" }
+        - name: "flip_mid_implication"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "C" }
+            right: { kind: "VAR", name: "A" }
+        - name: "B_and_not_C"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "B" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "C" }
+
+    - name: "nested_modus_tollens_chain"
+      description: "A→B, B→C, C→D, ¬D ⇒ ¬C, ¬B, ¬A"
+      chain_steps: 3
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+        C: { type: "derived" }
+        D: { type: "derived" }
+      premises:
+        - kind: "IMP"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "C" }
+          right: { kind: "VAR", name: "D" }
+        - kind: "NOT"
+          left: { kind: "VAR", name: "D" }
+      valid:
+        - name: "nmt_chain_mid_C"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "C" }
+        - name: "nmt_chain_mid_B"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "B" }
+        - name: "nmt_chain_final_A"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+      invalid:
+        - name: "affirm_A"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "affirm_B"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+        - name: "A_and_B"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "B" }
+        - name: "C_and_D"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "C" }
+            right: { kind: "VAR", name: "D" }
+
+    - name: "biconditional_chain"
+      description: "A↔B, B↔C, C↔D ⇒ A↔D"
+      chain_steps: 3
+      slots:
+        A: { type: "main" }
+        B: { type: "main" }
+        C: { type: "main" }
+        D: { type: "derived" }
+      premises:
+        - kind: "IFF"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "IFF"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+        - kind: "IFF"
+          left: { kind: "VAR", name: "C" }
+          right: { kind: "VAR", name: "D" }
+      valid:
+        - name: "biconditional_chain"
+          conclusion:
+            kind: "IFF"
+            left: { kind: "VAR", name: "A" }
+            right: { kind: "VAR", name: "D" }
+      invalid:
+        - name: "affirm_A"
+          conclusion:
+            kind: "VAR"
+            name: "A"
+        - name: "affirm_D"
+          conclusion:
+            kind: "VAR"
+            name: "D"
+        - name: "equiv_with_negation"
+          conclusion:
+            kind: "IFF"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "D" }
+        - name: "A_and_not_D"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "D" }
+
+    - name: "biconditional_implication_chain_modus_ponens"
+      description: "A↔B, B→C, C→D, A ⇒ B, C, D"
+      chain_steps: 3
+      slots:
+        A: { type: "main" }
+        B: { type: "derived" }
+        C: { type: "derived" }
+        D: { type: "derived" }
+      premises:
+        - kind: "IFF"
+          left: { kind: "VAR", name: "A" }
+          right: { kind: "VAR", name: "B" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "B" }
+          right: { kind: "VAR", name: "C" }
+        - kind: "IMP"
+          left: { kind: "VAR", name: "C" }
+          right: { kind: "VAR", name: "D" }
+        - kind: "VAR"
+          name: "A"
+      valid:
+        - name: "bicmp_mp_mid_B"
+          conclusion:
+            kind: "VAR"
+            name: "B"
+        - name: "bicmp_mp_mid_C"
+          conclusion:
+            kind: "VAR"
+            name: "C"
+        - name: "bicmp_mp_final_D"
+          conclusion:
+            kind: "VAR"
+            name: "D"
+      invalid:
+        - name: "negate_final_D"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "D" }
+        - name: "negate_start_A"
+          conclusion:
+            kind: "NOT"
+            left: { kind: "VAR", name: "A" }
+        - name: "C_and_not_D"
+          conclusion:
+            kind: "AND"
+            left: { kind: "VAR", name: "C" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "D" }
+        - name: "start_implies_not_B"
+          conclusion:
+            kind: "IMP"
+            left: { kind: "VAR", name: "A" }
+            right:
+              kind: "NOT"
+              left: { kind: "VAR", name: "B" }
+  difficulty:
+    easy:
+      chain_steps_dist: { 1: 0.8, 2: 0.2 }
+    medium:
+      chain_steps_dist: { 2: 1.0 }
+    hard:
+      chain_steps_dist: { 2: 0.2, 3: 0.8 }

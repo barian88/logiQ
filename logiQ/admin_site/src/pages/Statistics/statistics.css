@@ -1,0 +1,38 @@
+.container {
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 12px;
+}
+
+.statistics-pie-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.statistics-pie-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics-pie-title {
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+    .statistics-pie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .statistics-pie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

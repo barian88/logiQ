@@ -1,0 +1,3385 @@
+[
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∨ (q ∧ r), ¬p, (q ∧ r) → ¬s. Which of the following conclusions can be validly derived?",
+    "options": [
+      "¬s → p",
+      "p",
+      "q",
+      "(q ∧ r) ∧ ¬¬s"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: q ∧ r. Which of the following is logically equivalent to it?",
+    "options": [
+      "q ∧ ¬r",
+      "q ∨ r",
+      "¬(q ∧ r)",
+      "¬¬q ∧ r"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: q ∧ p. Which of the following is logically equivalent to it?",
+    "options": [
+      "¬¬(q ∧ p)",
+      "q ∨ ¬p",
+      "¬(q ∧ ¬p)",
+      "¬(q ∧ p)"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Given assignment α: p=F, r=T. Determine whether (p ↔ p) ∧ r is true under this assignment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ¬((q → q) → (q → p)). Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "¬((¬q ∨ q) → (¬¬q → p))",
+      "¬((q → q) → (p → q))",
+      "¬¬¬(¬(q → q) ∨ (q → p))",
+      "¬((q → p) → (¬q → q))"
+    ],
+    "correct_answer_index": [
+      0,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all formulas that are not equivalent to ¬((p ↔ p) ∧ (s → p)).",
+    "options": [
+      "¬((p ↔ p) ∨ (s → p))",
+      "¬((¬p ↔ p) ∧ (s → p))",
+      "¬((p ↔ p) ∧ ¬¬(s → p))",
+      "¬¬((p ↔ p) ∧ (s → p))"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which p ∧ q holds.",
+    "options": [
+      "p=T, q=T",
+      "p=F, q=T",
+      "p=T, q=F",
+      "p=F, q=F"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Choose the option that satisfies r ∧ q.",
+    "options": [
+      "q=F, r=F",
+      "q=T, r=F",
+      "q=T, r=T",
+      "q=F, r=T"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p → (¬q → r), p, ¬q. Which conclusions are not logically entailed?",
+    "options": [
+      "¬p",
+      "¬¬q ∨ r",
+      "p → ¬¬q",
+      "r"
+    ],
+    "correct_answer_index": [
+      0,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Are (r → q) ∧ (r → r) and ¬(q ∧ r) ∧ (r → r) equivalent under all assignments?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the formula that is equivalent to ¬(¬r → ¬q).",
+    "options": [
+      "¬¬¬r ∧ ¬¬q",
+      "¬(¬r ∧ ¬q)",
+      "¬(r ∧ ¬¬q)",
+      "¬(r → ¬q)"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which formulas yield the same truth values as ((p → r) ↔ (p ∨ q)) ↔ r in every case?",
+    "options": [
+      "((¬p ∨ r) ↔ (p ∨ q)) ↔ r",
+      "((¬¬r ∨ ¬p) ↔ (p ∨ q)) ↔ r",
+      "¬((p → r) ↔ (¬p ∧ q)) ↔ r",
+      "r ↔ ((p → r) ↔ ¬(¬p ∧ ¬q))"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which (r → p) ↔ (p → q) holds.",
+    "options": [
+      "p=F, q=F, r=T",
+      "p=F, q=T, r=T",
+      "p=T, q=F, r=T",
+      "p=F, q=T, r=F"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate q ∨ p with assignment p=T, q=T: true or false?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ↔ ¬q, p. Which conclusion can be correctly inferred?",
+    "options": [
+      "p ↔ ¬¬q",
+      "¬p",
+      "¬¬q",
+      "¬q"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Conclusion: ¬p ∨ ¬q. Given Premise: p → (q → (r ∨ s)), p, q. Evaluate whether the inference is valid.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which q ∧ p holds.",
+    "options": [
+      "p=F, q=F",
+      "p=T, q=F",
+      "p=T, q=T",
+      "p=F, q=T"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Choose the option that satisfies p ∧ q.",
+    "options": [
+      "p=T, q=F",
+      "p=F, q=T",
+      "p=F, q=F",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: (p → r) ∨ (q → q). Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "(¬p ∨ r) ∨ (q → ¬¬q)",
+      "(¬p → r) ∧ (q → q)",
+      "(p → r) ∨ (¬¬q → q)",
+      "(p → ¬r) ∨ ¬(q → q)"
+    ],
+    "correct_answer_index": [
+      0,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate whether q ∨ p is logically equivalent to ¬(q ∨ p).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Given assignment α: p=F, q=T. Determine whether q → p is true under this assignment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Decide whether the following two formulas are logically equivalent: (p ∨ q) ∧ (p → r) and (p ∨ ¬q) ∧ ¬(r → p).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments make the formula s ∧ ((r ∨ s) → (q ∧ r)) false?",
+    "options": [
+      "q=T, r=F, s=T",
+      "q=T, r=T, s=T",
+      "q=F, r=T, s=T",
+      "q=F, r=T, s=F"
+    ],
+    "correct_answer_index": [
+      0,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all formulas equivalent to r ∨ q.",
+    "options": [
+      "r ∨ ¬q",
+      "¬(¬r ∧ ¬q)",
+      "¬(¬r ∧ q)",
+      "¬¬(r ∨ q)"
+    ],
+    "correct_answer_index": [
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the formula that is not logically equivalent to r ∨ p.",
+    "options": [
+      "¬¬r ∨ p",
+      "p ∨ r",
+      "r ∨ ¬p",
+      "¬¬(r ∨ p)"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬¬p ∨ (q ∨ r), (s ∨ ¬q) ∧ (s ∨ ¬r), ¬s. Select the conclusion that follows logically.",
+    "options": [
+      "s",
+      "q ∨ r",
+      "q",
+      "¬(q ∨ r)"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option has the same truth values as (p ∧ q) ∨ (p ∧ q) under all assignments?",
+    "options": [
+      "¬(p ∧ q) ∨ (p ∧ q)",
+      "(p ∨ q) ∨ (p ∧ q)",
+      "((p ∧ q) ∨ p) ∧ ((p ∧ q) ∨ q)",
+      "(p ∧ q) ∨ (p ∨ q)"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: (p → q) ∧ (q → p). Which of the following conclusions cannot be derived?",
+    "options": [
+      "¬q ∨ p",
+      "¬p",
+      "p",
+      "p → q"
+    ],
+    "correct_answer_index": [
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p → (q ∨ r), (¬q ∧ ¬r) ∨ s, ¬s; Conclusion: q. Is this inference valid?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p → (q ∧ r), (¬q ∨ ¬r) ∨ s, p. Which option is not a valid inference?",
+    "options": [
+      "s",
+      "q",
+      "(q ∧ r) ∧ ¬s",
+      "r"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ((p → (q ∨ r)) ∧ (¬q ∧ ¬r)) ∨ ((p → (q ∨ r)) ∧ p). Which option is not a valid inference?",
+    "options": [
+      "(q ∨ r) → p",
+      "p ∨ (q ∨ r)",
+      "(¬p ∨ (q ∨ r)) ∧ ((q ∨ r) → p)",
+      "¬p ∨ (q ∨ r)"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ((p ↔ s) ↔ (r → r)) ∨ ¬(s ∨ s). Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "¬(s ∨ s) ∨ ((p ↔ s) ↔ ¬¬(r → r))",
+      "((s ↔ p) ↔ (r → r)) ∨ ¬(s ∨ ¬¬s)",
+      "((p ↔ s) ↔ (r → ¬r)) ∨ ¬(s ∨ s)",
+      "(¬(p ↔ s) ↔ (r ∧ r)) ∨ ¬(s ∨ s)"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which formulas differ in truth values from q ∨ p?",
+    "options": [
+      "¬(q ∨ p)",
+      "q ∧ p",
+      "q ∨ ¬¬p",
+      "p ∨ q"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∧ ¬q. Which of the following conclusions can be validly derived?",
+    "options": [
+      "¬¬q",
+      "¬q",
+      "¬p ∧ ¬¬q",
+      "¬p"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate whether (q ↔ q) → ¬p is logically equivalent to ((¬q ∨ q) ∧ (q → q)) → ¬p.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: (r ∨ s) → (s ∨ r). Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "(r ∨ s) → ¬(s ∨ r)",
+      "(r ∨ s) → (r ∨ s)",
+      "(r ∨ s) ∧ (s ∨ r)",
+      "(r ∨ s) → (¬¬s ∨ r)"
+    ],
+    "correct_answer_index": [
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which p ∧ q holds.",
+    "options": [
+      "p=T, q=F",
+      "p=T, q=T",
+      "p=F, q=T",
+      "p=F, q=F"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p → ((q ∨ r) → s), ¬p, q ∨ r. Which conclusions are not logically entailed?",
+    "options": [
+      "(¬q ∧ ¬r) ∨ s",
+      "s",
+      "¬¬p ∨ ¬(q ∨ r)",
+      "¬(q ∨ r)"
+    ],
+    "correct_answer_index": [
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments make the formula q ∧ (¬s ∨ (p ∧ q)) true?",
+    "options": [
+      "p=F, q=T, s=T",
+      "p=T, q=T, s=F",
+      "p=T, q=F, s=F",
+      "p=F, q=T, s=F"
+    ],
+    "correct_answer_index": [
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which (s ↔ q) ∧ (q ∨ p) holds.",
+    "options": [
+      "p=T, q=T, s=F",
+      "p=T, q=T, s=T",
+      "p=T, q=F, s=T",
+      "p=F, q=F, s=F"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option has the same truth values as q → p under all assignments?",
+    "options": [
+      "q → ¬p",
+      "q → ¬¬p",
+      "p → q",
+      "q ∧ p"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which formulas yield the same truth values as (r → q) ↔ (r ∨ r) in every case?",
+    "options": [
+      "(r → q) ↔ (r ∨ ¬r)",
+      "¬¬(r → q) ↔ (r ∨ r)",
+      "(¬r ∨ q) ↔ (r ∨ r)",
+      "(r → ¬q) ↔ (r ∨ r)"
+    ],
+    "correct_answer_index": [
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Choose the option that causes p → q to evaluate to false.",
+    "options": [
+      "p=F, q=F",
+      "p=T, q=F",
+      "p=F, q=T",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Under α = p=F, q=T, is the formula q → p satisfied?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option has the same truth values as q ∧ p under all assignments?",
+    "options": [
+      "¬(q ∧ p)",
+      "¬¬(q ∧ p)",
+      "q ∨ p",
+      "q ∧ ¬p"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the formula that is equivalent to p ↔ q.",
+    "options": [
+      "p → ¬q",
+      "p ↔ ¬q",
+      "q → p",
+      "¬¬(q ↔ p)"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Given assignment α: p=F, q=T. Determine whether p ∧ q is true under this assignment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all assignments that satisfy (r → p) ∨ (q ∧ p).",
+    "options": [
+      "p=T, q=T, r=T",
+      "p=T, q=F, r=T",
+      "p=F, q=F, r=T",
+      "p=F, q=T, r=T"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Given assignment α: q=T, r=F, s=F. Determine whether ((q ↔ q) ∨ s) ↔ ¬(s ∨ r) is true under this assignment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ↔ ¬q, ((¬q → r) ∧ ¬r) ∨ ((¬q → r) ∧ ¬q). Which conclusions are not logically entailed?",
+    "options": [
+      "p → r",
+      "r → p",
+      "(¬r → p) ∧ ¬r",
+      "r"
+    ],
+    "correct_answer_index": [
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Are (¬r ∨ (s ↔ p)) ∧ ((r ↔ p) ∨ (r → q)) and (¬r ∧ (s ↔ p)) ∧ ¬((r ↔ ¬p) ∨ (r → q)) equivalent under all assignments?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate whether (p ∧ r) ↔ p is logically equivalent to (¬¬(p ∧ r) → p) ∧ (p → ¬¬(p ∧ r)).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p → (q → r), p, q. Does the Conclusion: ¬q follow logically?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: (¬s → ¬s) ∧ (r → (q ∧ p)). Which of the following is not equivalent to it?",
+    "options": [
+      "¬((¬s → s) ∧ (r → (q ∧ p)))",
+      "((¬s → ¬s) ∧ ¬r) ∨ ((¬s → ¬s) ∧ (q ∧ p))",
+      "¬¬((¬s → ¬s) ∧ (¬r ∨ (q ∧ p)))",
+      "(r → (q ∧ p)) ∧ (¬¬s ∨ ¬s)"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: p ∧ (q ↔ q). Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "¬(p ∧ (¬q ↔ q))",
+      "¬p ∨ (q ↔ q)",
+      "p ∧ ((q → q) ∧ ¬¬(q → q))",
+      "p ∧ ((q → q) ∧ (q → q))"
+    ],
+    "correct_answer_index": [
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Conclusion: ¬s ∧ q. Given Premise: p → (¬(q ∨ r) ∨ s), p, q ∨ r. Evaluate whether the inference is valid.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula p ∧ q true?",
+    "options": [
+      "p=F, q=T",
+      "p=T, q=T",
+      "p=F, q=F",
+      "p=T, q=F"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ¬(q ∧ s) ↔ ¬(r ∨ p). Which of the following are not equivalent to it?",
+    "options": [
+      "¬(q ∧ s) → ¬(r ∨ p)",
+      "¬(q ∧ ¬s) ↔ ¬¬(r ∨ p)",
+      "¬(r ∨ p) ↔ ¬(¬¬q ∧ s)",
+      "¬(q ∧ ¬s) ↔ ¬(r ∨ p)"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ¬((s ∨ q) ∧ (p ↔ r)). Which of the following are not equivalent to it?",
+    "options": [
+      "¬(¬(s ∨ q) ∧ (r → p))",
+      "¬((s ∧ (p ↔ r)) ∨ ((p ↔ r) ∧ ¬¬q))",
+      "¬((¬s ∨ q) ∨ (p ↔ ¬r))",
+      "¬((s ∨ q) ∨ (p ↔ ¬r))"
+    ],
+    "correct_answer_index": [
+      0,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate whether p ∨ (r ∧ r) is logically equivalent to ¬¬(p ∨ r) ∧ (p ∨ r).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Given assignment α: p=T, q=F. Determine whether (q ∧ q) ↔ (p ↔ p) is true under this assignment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p → (q ∧ r), ((¬q ∨ ¬r) ∨ s) ∧ ((¬q ∨ ¬r) ∨ t), (s ∧ t) → (u ∨ v), ¬(u ∨ v). Which of the following conclusions cannot be derived?",
+    "options": [
+      "q ∧ r",
+      "q → ¬r",
+      "¬¬p",
+      "¬(s ∧ t)"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ↔ q, ((q → r) ∧ ¬r) ∨ ((q → r) ∧ q), (r → (s ∧ t)) ∧ (¬(s ∧ t) ∨ r). Which of the following conclusions can be validly derived?",
+    "options": [
+      "p",
+      "s ∧ t",
+      "(p → ¬(s ∧ t)) ∧ (¬(¬s ∨ ¬t) ∨ p)",
+      "p ↔ (s ∧ t)"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Are (q ∧ p) → ¬p and ¬¬((q ∧ p) → ¬p) equivalent under all assignments?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p ∨ ¬q, ¬¬q ∨ (r ∧ s), (r ∧ s) → (t ∧ u), p. Which conclusions are logically entailed?",
+    "options": [
+      "¬q",
+      "p → ¬(t ∧ u)",
+      "t ∧ u",
+      "t"
+    ],
+    "correct_answer_index": [
+      0,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which formulas differ in truth values from (q ↔ p) ∧ ¬p?",
+    "options": [
+      "(q ↔ ¬p) ∧ ¬p",
+      "(q ↔ p) ∨ ¬p",
+      "¬¬(q ↔ p) ∧ ¬p",
+      "(q ↔ p) ∧ ¬¬¬p"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Choose the option that satisfies ((p ∨ r) ∨ (p → r)) ∧ ((s → p) ∧ ¬p).",
+    "options": [
+      "p=F, r=F, s=F",
+      "p=T, r=F, s=F",
+      "p=T, r=T, s=T",
+      "p=T, r=F, s=T"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Are q ↔ s and ¬¬((q → s) ∧ (s → q)) equivalent under all assignments?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Decide whether the following two formulas are logically equivalent: p → r and ¬p → r.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∧ ¬q. Does the Conclusion: ¬p follow logically?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments make the formula (p ↔ q) → (p ∧ r) true?",
+    "options": [
+      "p=T, q=T, r=T",
+      "p=F, q=T, r=F",
+      "p=T, q=T, r=F",
+      "p=F, q=F, r=T"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all assignments that satisfy p ↔ q.",
+    "options": [
+      "p=F, q=F",
+      "p=T, q=F",
+      "p=F, q=T",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      0,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Decide whether the following two formulas are logically equivalent: p ↔ q and (p → ¬¬q) ∧ (q → p).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: q → p. Which of the following is logically equivalent to it?",
+    "options": [
+      "¬(q → p)",
+      "q ∧ p",
+      "¬(q ∧ p)",
+      "¬¬q → p"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∧ ¬q. Does the Conclusion: ¬q follow logically?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate whether q → p is logically equivalent to q → ¬¬p.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: (r → p) ∨ ¬q. Which of the following is logically equivalent to it?",
+    "options": [
+      "(r → p) ∨ ¬¬q",
+      "(r ∧ p) ∨ ¬q",
+      "¬¬(r → p) ∨ ¬q",
+      "(r → p) ∨ q"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Given assignment α: p=F, q=T, r=T. Determine whether p ↔ ((p ∧ r) ∨ (r ∨ q)) is true under this assignment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: p → q. Which of the following is logically equivalent to it?",
+    "options": [
+      "¬¬p → q",
+      "p ∧ q",
+      "q → p",
+      "p → ¬q"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all formulas equivalent to p ↔ q.",
+    "options": [
+      "(p → q) ∧ (q → p)",
+      "p ↔ ¬q",
+      "p → q",
+      "p ↔ ¬¬q"
+    ],
+    "correct_answer_index": [
+      0,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all assignments under which ((p → s) ∨ (q → s)) → (¬p ↔ (r → s)) fails.",
+    "options": [
+      "p=T, q=T, r=F, s=T",
+      "p=F, q=T, r=F, s=F",
+      "p=T, q=T, r=F, s=F",
+      "p=T, q=T, r=T, s=T"
+    ],
+    "correct_answer_index": [
+      0,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Given assignment α: p=T, q=F, r=F, s=F. Determine whether ((p ↔ s) ∧ (p ∨ q)) → (¬p ↔ (p ∧ r)) is true under this assignment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments make the formula p → s true?",
+    "options": [
+      "p=F, s=F",
+      "p=T, s=F",
+      "p=F, s=T",
+      "p=T, s=T"
+    ],
+    "correct_answer_index": [
+      0,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate whether p ↔ q is logically equivalent to (¬¬p → q) ∧ (q → p).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ((r → q) ↔ (r ↔ r)) ↔ (r ↔ (p ↔ p)). Which of the following is not equivalent to it?",
+    "options": [
+      "(r ↔ (p ↔ p)) ↔ ((¬¬r → q) ↔ (r ↔ r))",
+      "((r → q) ↔ (r → ¬r)) ↔ (r ↔ (p ↔ p))",
+      "(r ↔ (p ↔ p)) ↔ ((r → q) ↔ (r ↔ ¬¬r))",
+      "((r ↔ r) ↔ (r → q)) ↔ ¬¬(r ↔ (p ↔ p))"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula q ∧ p true?",
+    "options": [
+      "p=T, q=F",
+      "p=F, q=T",
+      "p=F, q=F",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Decide whether the following two formulas are logically equivalent: r → q and ¬(¬r ∧ q).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which r ∧ q holds.",
+    "options": [
+      "q=F, r=F",
+      "q=F, r=T",
+      "q=T, r=T",
+      "q=T, r=F"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the formula that is not logically equivalent to ¬(r → q) ∧ s.",
+    "options": [
+      "s ∧ ¬¬¬(r → q)",
+      "¬(r → ¬q) ∨ s",
+      "¬(¬¬(¬r ∨ q) ∨ ¬s)",
+      "¬(r → q) ∧ ¬¬s"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: (p → (q ∨ r)) ∧ ((q ∨ r) → p). Which conclusion can be correctly inferred?",
+    "options": [
+      "¬(¬p ∨ (q ∨ r))",
+      "p",
+      "r",
+      "(p → (q ∨ r)) ∧ ((p ∨ ¬q) ∧ (p ∨ ¬r))"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option has the same truth values as q ∧ p under all assignments?",
+    "options": [
+      "q ∨ p",
+      "¬q ∧ p",
+      "q ∧ ¬p",
+      "q ∧ ¬¬p"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all formulas equivalent to s → (p ∨ r).",
+    "options": [
+      "p ∨ (r ∨ ¬s)",
+      "¬¬(s → (p ∨ r))",
+      "(¬p ∧ r) → s",
+      "¬((p ∨ r) → ¬s)"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula (r ∧ r) ∨ (q ∧ p) true?",
+    "options": [
+      "p=F, q=F, r=F",
+      "p=T, q=F, r=F",
+      "p=F, q=F, r=T",
+      "p=F, q=T, r=F"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p ∧ ¬q. Which of the following conclusions can be validly derived?",
+    "options": [
+      "¬¬p",
+      "¬¬p ∧ ¬¬q",
+      "¬p ∧ ¬¬q",
+      "¬q"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Under which of these assignments does q ↔ ¬p evaluate to true?",
+    "options": [
+      "p=T, q=F",
+      "p=T, q=T",
+      "p=F, q=F",
+      "p=F, q=T"
+    ],
+    "correct_answer_index": [
+      0,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Conclusion: ¬¬p. Given Premise: ¬p → (q → ¬r), ¬p, q. Evaluate whether the inference is valid.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Are (p ∨ q) ↔ (q ↔ p) and (p ∨ ¬q) → (q ↔ p) equivalent under all assignments?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula (¬q ↔ r) ↔ p false?",
+    "options": [
+      "p=F, q=T, r=T",
+      "p=F, q=F, r=T",
+      "p=T, q=F, r=T",
+      "p=T, q=T, r=F"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: q → p. Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "¬¬(¬q ∨ p)",
+      "q → ¬p",
+      "p ∧ q",
+      "¬¬q → p"
+    ],
+    "correct_answer_index": [
+      0,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ¬(¬p ∨ (q ↔ q)). Which of the following are not equivalent to it?",
+    "options": [
+      "¬(p ∨ (q ↔ ¬q))",
+      "¬(p ∨ (¬q ↔ q))",
+      "¬(p → ((q → q) ∧ (q → q)))",
+      "¬(¬p ∨ (¬q ↔ q))"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p → ((q ∧ r) → s), p, q ∧ r. Which of the following conclusions can be validly derived?",
+    "options": [
+      "s",
+      "¬q ∨ ¬r",
+      "¬(q ∧ r) ∨ s",
+      "¬r"
+    ],
+    "correct_answer_index": [
+      0,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Choose the option that satisfies ¬(q → p).",
+    "options": [
+      "p=F, q=T",
+      "p=F, q=F",
+      "p=T, q=F",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Under α = p=F, q=F, is the formula q ∨ p satisfied?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Under α = p=T, q=F, is the formula q ↔ p satisfied?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments make the formula (¬s ∨ (p ∨ q)) ∧ (¬r ↔ (p → q)) false?",
+    "options": [
+      "p=F, q=F, r=T, s=T",
+      "p=T, q=F, r=F, s=T",
+      "p=F, q=F, r=F, s=F",
+      "p=T, q=T, r=T, s=T"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all assignments under which ¬(q ↔ p) fails.",
+    "options": [
+      "p=T, q=T",
+      "p=F, q=F",
+      "p=T, q=F",
+      "p=F, q=T"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Under α = p=F, q=T, is the formula p → q satisfied?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula p ∧ q true?",
+    "options": [
+      "p=F, q=F",
+      "p=T, q=F",
+      "p=F, q=T",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Choose the option that satisfies q ∧ p.",
+    "options": [
+      "p=T, q=T",
+      "p=T, q=F",
+      "p=F, q=F",
+      "p=F, q=T"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Under which of these assignments does ¬(s ∨ q) ↔ ¬(s ∨ r) evaluate to false?",
+    "options": [
+      "q=T, r=T, s=T",
+      "q=T, r=F, s=F",
+      "q=T, r=T, s=F",
+      "q=F, r=T, s=F"
+    ],
+    "correct_answer_index": [
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all assignments that satisfy ¬((p ↔ s) ↔ (q ∨ p)).",
+    "options": [
+      "p=F, q=T, s=T",
+      "p=F, q=F, s=F",
+      "p=T, q=F, s=F",
+      "p=F, q=F, s=T"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate ((p ↔ s) ↔ (q ∧ s)) ∧ ¬(s ∧ p) with assignment p=F, q=T, s=F: true or false?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula r ∧ p true?",
+    "options": [
+      "p=F, r=F",
+      "p=T, r=F",
+      "p=F, r=T",
+      "p=T, r=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the formula that is equivalent to q → (r → s).",
+    "options": [
+      "q → ¬(r → s)",
+      "q → (¬r ∨ s)",
+      "q → (r → ¬s)",
+      "q → (¬r → s)"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all formulas equivalent to ¬r ∧ (r ↔ s).",
+    "options": [
+      "¬r ∧ ¬¬(r → s)",
+      "¬r ∧ ((¬s ∨ r) ∧ (r → s))",
+      "¬¬((¬r ∧ (r → s)) ∧ (s → r))",
+      "(¬r ∧ (r → s)) ∧ (¬¬s → r)"
+    ],
+    "correct_answer_index": [
+      1,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Are ((r ∧ r) → (q → r)) → ((r ∧ q) ∨ (s → r)) and ¬(((r ∧ r) → (q → r)) → ((r ∨ q) ∨ (s → r))) equivalent under all assignments?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∨ q, ¬p, (¬q ∨ r) ∧ (¬q ∨ s). Which of the following conclusions can be validly derived?",
+    "options": [
+      "(r ∧ s) → p",
+      "q ∧ (r → ¬s)",
+      "q",
+      "p"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Conclusion: ¬q. Given Premise: p ∧ q. Evaluate whether the inference is valid.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the formula that is equivalent to p ∨ q.",
+    "options": [
+      "¬¬(p ∧ q)",
+      "¬p ∨ ¬q",
+      "¬¬q ∨ p",
+      "p ∧ q"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate ¬q ∨ (r ∧ q) with assignment q=T, r=T: true or false?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬¬p ∨ q, q → (r ∧ s), ¬(r ∧ s) ∨ t, ¬p. Which of the following conclusions cannot be derived?",
+    "options": [
+      "s",
+      "r",
+      "¬t",
+      "t"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ((r ∧ p) ↔ (p ↔ s)) ∨ ¬(q → q). Which of the following are not equivalent to it?",
+    "options": [
+      "((r ∧ p) ↔ (p ↔ s)) ∧ ¬¬¬(q → q)",
+      "((p ∧ r) ↔ (¬¬p ↔ s)) ∨ ¬(q → q)",
+      "¬((r ∧ p) ↔ (p ↔ ¬s)) ∨ ¬(q ∧ q)",
+      "((r ∧ p) ↔ (p ↔ s)) ∨ ¬(q ∧ ¬¬q)"
+    ],
+    "correct_answer_index": [
+      0,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option has the same truth values as ((r ↔ p) → ¬q) ↔ (¬p → (r ∨ r)) under all assignments?",
+    "options": [
+      "¬(((r ↔ p) → ¬q) → (¬p → (r ∨ r)))",
+      "(((p → r) ∧ (r → p)) → ¬q) ↔ (¬p → (r ∨ r))",
+      "((r ↔ p) → ¬q) ↔ ((r ∨ r) → ¬¬p)",
+      "¬((r ↔ p) → ¬q) ↔ (¬p → (¬r ∨ r))"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula q → p false?",
+    "options": [
+      "p=T, q=T",
+      "p=T, q=F",
+      "p=F, q=T",
+      "p=F, q=F"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Under which of these assignments does p ↔ r evaluate to true?",
+    "options": [
+      "p=T, r=F",
+      "p=T, r=T",
+      "p=F, r=F",
+      "p=F, r=T"
+    ],
+    "correct_answer_index": [
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Under α = p=T, r=F, is the formula ¬(¬p → ¬r) satisfied?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option differs in truth values from (q ↔ p) → (p ∧ p)?",
+    "options": [
+      "((q → p) ∧ (p → q)) → (p ∧ p)",
+      "((¬¬q → p) ∧ (p → ¬¬q)) → (p ∧ p)",
+      "¬((q ↔ p) → (p ∧ p))",
+      "(p ↔ q) → (p ∧ p)"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Choose the option that satisfies q ↔ ((r ∨ r) ∨ ¬q).",
+    "options": [
+      "q=F, r=F",
+      "q=T, r=F",
+      "q=T, r=T",
+      "q=F, r=T"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all formulas equivalent to (s ∨ p) ∨ (r → s).",
+    "options": [
+      "¬(s ∧ p) ∨ (¬r → s)",
+      "¬¬(s ∨ ((r → s) ∨ p))",
+      "((s ∨ p) ∨ ¬r) ∨ s",
+      "¬((¬s ∨ p) ∨ (s → r))"
+    ],
+    "correct_answer_index": [
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate p ∨ q with assignment p=F, q=T: true or false?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Given assignment α: p=F, q=F. Determine whether p ∨ q is true under this assignment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option has the same truth values as ((s ∨ r) ↔ (q → s)) ∧ (¬s → (q → s)) under all assignments?",
+    "options": [
+      "((s ∨ r) ↔ (q → s)) ∧ (¬¬s ∨ (q → ¬¬s))",
+      "((s ∨ r) → ¬(q → s)) ∧ (¬s → (q → s))",
+      "((s ∨ r) ↔ (q → s)) ∨ ¬(¬s → (q → s))",
+      "((s ∨ ¬r) ↔ (q → s)) ∧ (s → (q → s))"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which p ∧ q holds.",
+    "options": [
+      "p=T, q=F",
+      "p=F, q=F",
+      "p=F, q=T",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: p → q. Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "¬¬p → q",
+      "¬(¬p → q)",
+      "¬p ∨ q",
+      "¬(p → ¬q)"
+    ],
+    "correct_answer_index": [
+      0,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: (¬¬p ∨ ¬q) ∧ (¬q → ¬p), ¬p. Select the conclusion that follows logically.",
+    "options": [
+      "¬q",
+      "¬¬q",
+      "¬¬p",
+      "(¬p → ¬¬q) ∧ (¬¬¬q ∨ ¬p)"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula r ∧ q true?",
+    "options": [
+      "q=T, r=T",
+      "q=T, r=F",
+      "q=F, r=T",
+      "q=F, r=F"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which ((r → p) ∧ (p ∧ q)) ∧ ((q ∧ q) ↔ (q ∧ r)) holds.",
+    "options": [
+      "p=T, q=T, r=T",
+      "p=F, q=T, r=F",
+      "p=T, q=T, r=F",
+      "p=F, q=F, r=T"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which ¬(p → r) holds.",
+    "options": [
+      "p=F, r=F",
+      "p=T, r=F",
+      "p=F, r=T",
+      "p=T, r=T"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Evaluate ((p ∧ r) → (s → s)) ↔ ((s ↔ s) ∧ ¬r) with assignment p=F, r=T, s=T: true or false?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option differs in truth values from ((p ∨ q) ∨ ¬q) ↔ ((q ↔ s) → (r → p))?",
+    "options": [
+      "((¬¬p ∨ q) ∨ ¬q) ↔ ((s ↔ q) → (r → p))",
+      "((p ∨ q) ∨ ¬q) ↔ (¬¬(s ↔ q) → (r → p))",
+      "((¬p ∨ q) ∨ ¬q) ↔ ((q ↔ s) ∧ (r → p))",
+      "(p ∨ (q ∨ ¬q)) ↔ ((q ↔ ¬¬s) → (r → p))"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: (¬p ∨ q) ∧ (¬p ∨ r), (q ∧ r) → ¬s, ¬s → t, ¬t. Which of the following conclusions can be validly derived?",
+    "options": [
+      "p ∧ (q ∧ r)",
+      "q → ¬r",
+      "¬s ∧ t",
+      "p"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments make the formula ((q → r) ↔ (p ↔ r)) ∧ q true?",
+    "options": [
+      "p=T, q=F, r=T",
+      "p=T, q=T, r=T",
+      "p=T, q=T, r=F",
+      "p=F, q=T, r=T"
+    ],
+    "correct_answer_index": [
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: (¬p ∨ ¬q) ∧ (¬q → p), ¬q ↔ r, (r → (s ∧ t)) ∧ ((¬s ∨ ¬t) ∨ r). Does the Conclusion: p → (s ∧ t) follow logically?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments make the formula r ∧ ((r → r) ∨ (r ∨ s)) false?",
+    "options": [
+      "r=T, s=F",
+      "r=T, s=T",
+      "r=F, s=T",
+      "r=F, s=F"
+    ],
+    "correct_answer_index": [
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula ((p → r) → ¬p) ↔ ¬(s ∨ s) true?",
+    "options": [
+      "p=T, r=F, s=T",
+      "p=T, r=T, s=F",
+      "p=F, r=F, s=T",
+      "p=T, r=F, s=F"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∨ ¬q, ¬p, ¬q → r. Which of the following conclusions cannot be derived?",
+    "options": [
+      "r → p",
+      "p",
+      "r",
+      "¬q ∧ ¬r"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the formula that is equivalent to ¬(r ∧ p) ∨ ((s ∨ p) ↔ p).",
+    "options": [
+      "¬¬(r ∧ p) ∨ ((s ∨ ¬p) ↔ p)",
+      "¬(r ∧ p) ∨ (¬(s ∨ p) ↔ p)",
+      "¬(¬(r ∧ p) ∨ ((s ∧ p) ↔ p))",
+      "¬¬(¬(r ∧ p) ∨ (p ↔ (s ∨ p)))"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p ∨ (q ∨ r), (q ∨ r) → s, s → (t ∨ u), ¬(t ∨ u). Which conclusions are not logically entailed?",
+    "options": [
+      "r",
+      "s ∧ t",
+      "(s ∧ t) ∨ (s ∧ u)",
+      "¬q ∧ ¬r"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which ¬¬(s ∧ r) holds.",
+    "options": [
+      "r=F, s=F",
+      "r=F, s=T",
+      "r=T, s=T",
+      "r=T, s=F"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: q ∧ ¬p. Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "¬(q ∨ ¬¬p)",
+      "¬¬q ∧ ¬p",
+      "¬¬¬p ∧ q",
+      "¬q ∨ ¬p"
+    ],
+    "correct_answer_index": [
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ((p ∧ q) → (p ∧ p)) ∨ p. Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "(¬¬(q ∧ p) → (p ∧ p)) ∨ p",
+      "¬((p ∧ ¬q) → (p ∧ p)) ∨ p",
+      "((p ∧ q) → ¬¬(p ∧ p)) ∨ p",
+      "(¬(p ∧ q) → (p ∧ ¬p)) ∨ p"
+    ],
+    "correct_answer_index": [
+      0,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: p → r. Which of the following is logically equivalent to it?",
+    "options": [
+      "p → ¬r",
+      "p ∧ ¬r",
+      "¬p ∨ ¬¬r",
+      "¬r → p"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p → q, ¬q ∨ (r ∨ s), (¬r ∧ ¬s) ∨ (t ∨ u), p. Select all conclusions that are not valid consequences.",
+    "options": [
+      "q",
+      "r ∨ s",
+      "(r ∨ s) ∧ ¬(t ∨ u)",
+      "¬(t ∨ u)"
+    ],
+    "correct_answer_index": [
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p ∨ (q ∨ r), ((¬q ∧ ¬r) ∨ s) ∧ (¬(q ∨ r) ∨ t), (¬s ∨ ¬t) ∨ (u ∨ v), ¬u ∧ ¬v. Which of the following conclusions can be validly derived?",
+    "options": [
+      "¬(s ∧ t)",
+      "¬p",
+      "r",
+      "¬(q ∨ r)"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all assignments that satisfy ¬¬p ↔ ((p ↔ s) → (s ∧ q)).",
+    "options": [
+      "p=T, q=F, s=F",
+      "p=T, q=T, s=F",
+      "p=T, q=T, s=T",
+      "p=F, q=F, s=T"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: (p → (q ∨ r)) ∧ ((¬q ∧ ¬r) ∨ p), (q ∨ r) → s, s → (t ∧ u), p. Which conclusions are logically entailed?",
+    "options": [
+      "s ∧ ¬(t ∧ u)",
+      "q ∨ r",
+      "s",
+      "t"
+    ],
+    "correct_answer_index": [
+      1,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Are ¬(p ↔ q) ↔ ((p ↔ q) ↔ (p ∧ q)) and ¬(q → p) ↔ ((p ↔ q) ↔ (¬p ∧ q)) equivalent under all assignments?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which (r ∧ p) ∧ (r ↔ q) holds.",
+    "options": [
+      "p=F, q=T, r=F",
+      "p=T, q=F, r=F",
+      "p=T, q=F, r=T",
+      "p=T, q=T, r=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Are p ↔ q and ¬p ↔ q equivalent under all assignments?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Decide whether the following two formulas are logically equivalent: p → r and ¬¬(¬p ∨ r).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ((q → r) ∧ (p → r)) ∨ ((q → s) ↔ (r ∨ q)). Which of the following are not equivalent to it?",
+    "options": [
+      "((q → r) ∧ ¬(p ∧ r)) ∨ ((q → s) ↔ (¬r ∨ q))",
+      "((¬q → r) ∧ (p → r)) ∨ ¬((s → q) ↔ (r ∨ q))",
+      "((p → r) ∧ (q → r)) ∨ ((q → s) ↔ (r ∨ q))",
+      "((q → r) ∧ (p → r)) ∨ ((r ∨ q) ↔ (¬q ∨ s))"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ¬((r → p) ∨ r). Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "¬¬((r → p) ∨ r)",
+      "¬(¬¬r ∨ (¬r ∨ p))",
+      "¬r ∧ ¬(¬¬r → p)",
+      "¬¬(¬r ∧ ¬(r → p))"
+    ],
+    "correct_answer_index": [
+      1,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option has the same truth values as r ∧ q under all assignments?",
+    "options": [
+      "¬¬r ∧ q",
+      "¬(r ∧ q)",
+      "¬r ∧ q",
+      "r ∨ q"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the formula that is equivalent to (q ↔ q) ∨ r.",
+    "options": [
+      "(q → ¬q) ∨ r",
+      "¬((q ↔ q) ∧ r)",
+      "¬((q ↔ ¬q) ∨ r)",
+      "¬(q ↔ q) → r"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p → (q ∧ r), (¬q ∨ ¬r) ∨ (s ∨ t), (s ∨ t) → (u ∨ v), ¬(u ∨ v). Select the conclusion that does not follow.",
+    "options": [
+      "q → ¬r",
+      "¬p",
+      "¬(s ∨ t)",
+      "q ∧ r"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all assignments under which (q ∨ p) ∧ (q ∧ p) fails.",
+    "options": [
+      "p=T, q=F",
+      "p=F, q=F",
+      "p=T, q=T",
+      "p=F, q=T"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p ∨ q, ¬¬p, q → r, r → s. Select all conclusions that are not valid consequences.",
+    "options": [
+      "¬s",
+      "q",
+      "¬p",
+      "q ∧ ¬r"
+    ],
+    "correct_answer_index": [
+      0,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which (p ↔ r) → ¬p does not hold.",
+    "options": [
+      "p=T, r=T",
+      "p=F, r=F",
+      "p=F, r=T",
+      "p=T, r=F"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the formula that is not logically equivalent to ((q → q) ∧ (q ∧ p)) → s.",
+    "options": [
+      "((q → q) ∧ (q ∧ ¬¬p)) → s",
+      "((q → q) ∧ (q ∧ p)) ∧ s",
+      "(¬¬(q → q) ∧ (q ∧ p)) → s",
+      "((¬¬q → q) ∧ (q ∧ p)) → s"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which formulas yield the same truth values as (q ∧ q) → (r ∧ p) in every case?",
+    "options": [
+      "(¬q ∨ ¬¬¬q) ∨ (r ∧ p)",
+      "¬¬(r ∧ p) ∨ ¬(q ∧ q)",
+      "(q ∧ ¬q) ∧ (r ∧ p)",
+      "¬¬(q ∧ q) → (r ∨ p)"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Decide whether the following two formulas are logically equivalent: p → q and ¬¬(p → q).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Are p ∧ q and p ∧ ¬q equivalent under all assignments?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option has the same truth values as q ∨ r under all assignments?",
+    "options": [
+      "¬¬(q ∨ r)",
+      "¬(q ∨ r)",
+      "q ∧ r",
+      "q ∨ ¬r"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula ¬¬r ∧ ((r ∨ p) ↔ ¬q) true?",
+    "options": [
+      "p=T, q=F, r=F",
+      "p=T, q=T, r=F",
+      "p=F, q=T, r=T",
+      "p=T, q=F, r=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which p ∧ q holds.",
+    "options": [
+      "p=T, q=F",
+      "p=F, q=T",
+      "p=F, q=F",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which (r ∧ q) ↔ (r ∧ p) does not hold.",
+    "options": [
+      "p=T, q=T, r=F",
+      "p=T, q=F, r=F",
+      "p=F, q=T, r=T",
+      "p=F, q=T, r=F"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∧ q. Select the conclusion that follows logically.",
+    "options": [
+      "¬q",
+      "¬p",
+      "p",
+      "¬(p ∨ q)"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p ↔ (q ∧ r), ¬p. Does the Conclusion: ¬(q ∧ r) follow logically?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p ∨ q, ¬¬p, q → r, r → (s ∧ t). Which conclusions are not logically entailed?",
+    "options": [
+      "t",
+      "¬(s ∧ t)",
+      "q",
+      "¬p"
+    ],
+    "correct_answer_index": [
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula p ∧ q true?",
+    "options": [
+      "p=T, q=F",
+      "p=F, q=T",
+      "p=F, q=F",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: ¬p → ((q ∨ r) → (s ∨ t)), ¬p, q ∨ r. Which conclusions are logically entailed?",
+    "options": [
+      "¬(s ∨ t) ∧ q",
+      "(q ∨ r) → (s ∨ t)",
+      "s ∨ t",
+      "¬p → ¬(q ∨ r)"
+    ],
+    "correct_answer_index": [
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: (p → q) ∧ (¬q ∨ p), ¬q ∨ (r ∨ s), (r ∨ s) → (t ∧ u), p. Does the Conclusion: u follow logically?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula q ∧ (p ↔ q) true?",
+    "options": [
+      "p=F, q=F",
+      "p=T, q=F",
+      "p=F, q=T",
+      "p=T, q=T"
+    ],
+    "correct_answer_index": [
+      3
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Given assignment α: p=F, q=T. Determine whether q ∧ p is true under this assignment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∨ (q ∧ r), ¬p, (q ∧ r) → ¬s, ¬¬s ∨ ¬t. Which of the following conclusions cannot be derived?",
+    "options": [
+      "p",
+      "(q ∧ r) ∧ ¬¬s",
+      "¬¬s",
+      "¬t"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      2
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: (q → p) ∧ (r ↔ r). Which of the following is logically equivalent to it?",
+    "options": [
+      "¬(q → p) ∧ (r ↔ r)",
+      "¬((q → p) ∧ (r ↔ r))",
+      "¬¬((q → p) ∧ (r ↔ r))",
+      "(q → p) ∧ ¬(r ↔ r)"
+    ],
+    "correct_answer_index": [
+      2
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: ((p ∨ s) → (q ∨ s)) ↔ s. Which of the following formulas are logically equivalent to it?",
+    "options": [
+      "s ↔ (¬(p ∨ s) ∨ (q ∨ s))",
+      "¬((q ∨ s) → (p ∨ s)) ↔ s",
+      "¬¬(¬(p ∨ s) ∨ (q ∨ s)) ↔ s",
+      "s ↔ (¬¬(p ∨ s) → (q ∨ s))"
+    ],
+    "correct_answer_index": [
+      0,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Target formula: (s → q) ↔ ¬s. Which of the following are not equivalent to it?",
+    "options": [
+      "¬(s → q) ↔ ¬s",
+      "¬s ↔ (s → q)",
+      "(q → s) ↔ ¬s",
+      "(s ∧ q) ↔ ¬s"
+    ],
+    "correct_answer_index": [
+      0,
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∨ (q ∧ r), ¬p, (¬q ∨ ¬r) ∨ (s ∨ t). Which of the following conclusions can be validly derived?",
+    "options": [
+      "r",
+      "q ∧ r",
+      "(¬s ∧ ¬t) ∨ p",
+      "s ∨ t"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: (p → (q ∨ r)) ∧ (¬(q ∨ r) ∨ p), (q ∨ r) → (s ∨ t), (s ∨ t) → u, p. Which of the following conclusions can be validly derived?",
+    "options": [
+      "q ∨ r",
+      "u",
+      "(¬u ∧ s) ∨ (¬u ∧ t)",
+      "¬u ∧ t"
+    ],
+    "correct_answer_index": [
+      0,
+      1
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Conclusion: r. Given Premise: (¬p → q) ∧ (q → ¬p), ¬q ∨ r, r → (s ∨ t), ¬p. Evaluate whether the inference is valid.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      0
+    ],
+    "type": "trueFalse",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which option differs in truth values from ¬q → ((p ∧ r) ↔ (q ↔ s))?",
+    "options": [
+      "¬q → ((p ∧ r) ↔ (q ↔ ¬¬s))",
+      "¬q ∧ ((p ∧ r) ↔ (q ↔ s))",
+      "¬¬q ∨ ((p ∧ r) ↔ (q ↔ s))",
+      "¬q → ((q ↔ s) ↔ (p ∧ r))"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "equivalence",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: p ∨ (q ∨ r), ¬p, ¬(q ∨ r) ∨ (s ∨ t), (¬u ∨ ¬s) ∧ (¬u ∨ ¬t). Which of the following conclusions cannot be derived?",
+    "options": [
+      "s ∨ t",
+      "¬¬u",
+      "q ∨ r",
+      "(¬s ∧ ¬t) ∨ p"
+    ],
+    "correct_answer_index": [
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select all assignments under which p ↔ ¬(p ↔ r) fails.",
+    "options": [
+      "p=F, r=F",
+      "p=T, r=F",
+      "p=T, r=T",
+      "p=F, r=T"
+    ],
+    "correct_answer_index": [
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "truthTable",
+    "difficulty": "medium",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which of the following assignments makes the formula (r ↔ p) ↔ ¬q true?",
+    "options": [
+      "p=F, q=T, r=F",
+      "p=T, q=F, r=T",
+      "p=T, q=F, r=F",
+      "p=T, q=T, r=T"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Decide whether the following two formulas are logically equivalent: q ↔ p and ¬(q ↔ p).",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "equivalence",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Select the assignment under which q ∧ p holds.",
+    "options": [
+      "p=T, q=F",
+      "p=T, q=T",
+      "p=F, q=T",
+      "p=F, q=F"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "singleChoice",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Premise: (p → q) ∧ (q → p), q → (r ∨ s), ((t ∨ u) ∨ ¬r) ∧ ((t ∨ u) ∨ ¬s), p. Select all conclusions that follow logically.",
+    "options": [
+      "r ∨ s",
+      "t ∨ u",
+      "¬t ∧ ¬u",
+      "q"
+    ],
+    "correct_answer_index": [
+      0,
+      1,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "inference",
+    "difficulty": "hard",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Under α = q=T, r=F, is the formula q → r satisfied?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer_index": [
+      1
+    ],
+    "type": "trueFalse",
+    "category": "truthTable",
+    "difficulty": "easy",
+    "is_active": true
+  },
+  {
+    "_id": "000000000000000000000000",
+    "question_text": "Which formulas yield the same truth values as ¬r ↔ ¬q in every case?",
+    "options": [
+      "r → ¬q",
+      "¬r → q",
+      "(¬q → ¬r) ∧ (¬r → ¬q)",
+      "¬r ↔ ¬¬¬q"
+    ],
+    "correct_answer_index": [
+      2,
+      3
+    ],
+    "type": "multipleChoice",
+    "category": "equivalence",
+    "difficulty": "medium",
+    "is_active": true
+  }
+]

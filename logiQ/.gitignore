@@ -1,0 +1,4 @@
+*.DS_Store
+.claude
+docker/mongo-data/
+docker/redis-data/

@@ -1,0 +1,48 @@
+.table-container {
+  /* 让容器占据整个视口高度 */
+  height: 100%;
+  
+  /* 将内边距的计算方式包含在总高度内 */
+  box-sizing: border-box;
+  
+  /* 使用 Flexbox 布局 */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 36px;
+
+
+}
+
+.table-footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+.table-footer-actions {
+  display: flex;
+  gap: 24px;
+}
+
+/* 确保 antd 的表格包装器能正确地在 Flex 容器中伸展 */
+.table-container .ant-table-wrapper,
+.table-container .ant-spin-nested-loading,
+.table-container .ant-spin-container,
+.table-container .ant-table,
+.table-container .ant-table-container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.table-container .ant-table-body {
+  flex: 1;
+  overflow: auto;
+}
+
+/* 标签样式调整 */
+.ant-tag {
+    font-size: 1em;
+    margin: 0 0 4px 4px;
+}

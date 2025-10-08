@@ -1,0 +1,188 @@
+[{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc61c"
+  },
+  "question_text": "Under α = p=T, q=F, r=T, is the formula ¬(¬r ∧ (p ∨ q)) satisfied?",
+  "options": [
+    "True",
+    "False"
+  ],
+  "correct_answer_index": [
+    0
+  ],
+  "type": "trueFalse",
+  "category": "truthTable",
+  "difficulty": "hard",
+  "is_active": true
+},
+{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc61d"
+  },
+  "question_text": "Select the formula that is not logically equivalent to (q → p) ↔ (q ∨ q).",
+  "options": [
+    "¬((q → p) → (q ∨ q))",
+    "(q ∨ q) ↔ ¬¬(q → p)",
+    "((q → p) → (q ∨ q)) ∧ ((¬¬q ∨ q) → (q → p))",
+    "(q → ¬¬p) ↔ (q ∨ q)"
+  ],
+  "correct_answer_index": [
+    0
+  ],
+  "type": "singleChoice",
+  "category": "equivalence",
+  "difficulty": "medium",
+  "is_active": true
+},
+{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc61e"
+  },
+  "question_text": "Premise: ¬¬p ∨ q, ¬q ∨ ¬r, ¬p. Select the conclusion that follows logically.",
+  "options": [
+    "¬¬p",
+    "¬¬r",
+    "q ∧ ¬¬r",
+    "¬r"
+  ],
+  "correct_answer_index": [
+    3
+  ],
+  "type": "singleChoice",
+  "category": "inference",
+  "difficulty": "easy",
+  "is_active": true
+},
+{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc61f"
+  },
+  "question_text": "Which formulas yield the same truth values as q ↔ p in every case?",
+  "options": [
+    "¬q ↔ p",
+    "(q → ¬¬p) ∧ (¬¬p → q)",
+    "¬¬p ↔ q",
+    "¬q → p"
+  ],
+  "correct_answer_index": [
+    1,
+    2
+  ],
+  "type": "multipleChoice",
+  "category": "equivalence",
+  "difficulty": "medium",
+  "is_active": true
+},
+{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc620"
+  },
+  "question_text": "Premise: ¬p → (q ∧ r), (¬q ∨ ¬r) ∨ ¬s, ¬s → t, ¬p. Which of the following conclusions can be validly derived?",
+  "options": [
+    "q",
+    "¬s",
+    "q → ¬r",
+    "r"
+  ],
+  "correct_answer_index": [
+    0,
+    1,
+    3
+  ],
+  "type": "multipleChoice",
+  "category": "inference",
+  "difficulty": "hard",
+  "is_active": true
+},
+{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc621"
+  },
+  "question_text": "Under α = p=F, q=T, is the formula p ∧ q satisfied?",
+  "options": [
+    "True",
+    "False"
+  ],
+  "correct_answer_index": [
+    1
+  ],
+  "type": "trueFalse",
+  "category": "truthTable",
+  "difficulty": "easy",
+  "is_active": true
+},
+{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc622"
+  },
+  "question_text": "Select all formulas that are not equivalent to (q ↔ p) ↔ (q → r).",
+  "options": [
+    "((¬¬q ↔ p) → (q → r)) ∧ ((q → r) → (q ↔ p))",
+    "(q ↔ p) ↔ (q ∧ ¬r)",
+    "(q ↔ p) ↔ (¬q → r)",
+    "(p ↔ q) ↔ (¬q ∨ r)"
+  ],
+  "correct_answer_index": [
+    1,
+    2
+  ],
+  "type": "multipleChoice",
+  "category": "equivalence",
+  "difficulty": "medium",
+  "is_active": true
+},
+{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc623"
+  },
+  "question_text": "Select the formula that is equivalent to ¬p ∧ (p ∨ q).",
+  "options": [
+    "¬¬p ∧ (p ∨ q)",
+    "¬p ∨ (p ∨ q)",
+    "¬p ∧ (p ∨ ¬q)",
+    "¬¬(¬p ∧ (p ∨ q))"
+  ],
+  "correct_answer_index": [
+    3
+  ],
+  "type": "singleChoice",
+  "category": "equivalence",
+  "difficulty": "easy",
+  "is_active": true
+},
+{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc624"
+  },
+  "question_text": "Evaluate p → q with assignment p=F, q=F: true or false?",
+  "options": [
+    "True",
+    "False"
+  ],
+  "correct_answer_index": [
+    0
+  ],
+  "type": "trueFalse",
+  "category": "truthTable",
+  "difficulty": "easy",
+  "is_active": true
+},
+{
+  "_id": {
+    "$oid": "68d598368fb43ae1640bc625"
+  },
+  "question_text": "Choose the option that satisfies q ∧ p.",
+  "options": [
+    "p=T, q=F",
+    "p=F, q=F",
+    "p=T, q=T",
+    "p=F, q=T"
+  ],
+  "correct_answer_index": [
+    2
+  ],
+  "type": "singleChoice",
+  "category": "truthTable",
+  "difficulty": "easy",
+  "is_active": true
+}]

@@ -1,0 +1,33 @@
+equivalence:
+  rules:
+    equivalent:
+      - name: "double_negation"
+        description: "¬¬A ≡ A"
+      - name: "implication_elimination"
+        description: "A → B ≡ ¬A ∨ B"
+      - name: "commutativity"
+        description: "A ∧ B ≡ B ∧ A; A ∨ B ≡ B ∨ A"
+      - name: "de_morgan"
+        description: "¬(A ∧ B) ≡ ¬A ∨ ¬B; ¬(A ∨ B) ≡ ¬A ∧ ¬B"
+      - name: "biconditional_expansion"
+        description: "A ↔ B ≡ (A → B) ∧ (B → A)"
+      - name: "associativity"
+        description: "A ∧ (B ∧ C) ≡ (A ∧ B) ∧ C; A ∨ (B ∨ C) ≡ (A ∨ B) ∨ C"
+      - name: "distributivity"
+        description: "A ∧ (B ∨ C) ≡ (A ∧ B) ∨ (A ∧ C); A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C)"
+    nonequivalent:
+      - name: "negate_root"
+        description: "Introduce or remove a negation on the entire formula"
+      - name: "reverse_implication"
+        description: "Reverse implication direction: A → B → B → A"
+      - name: "flip_operator"
+        description: "Swap a connector (e.g., ∧ ↔ ∨) on the current node"
+      - name: "mutate_literal"
+        description: "Negate or tweak a literal/subtree"
+  difficulty:
+    easy:
+      chain_steps_dist: { 1: 0.5, 2: 0.5, 3: 0.0 }
+    medium:
+      chain_steps_dist: { 1: 0.2, 2: 0.4, 3: 0.4 }
+    hard:
+      chain_steps_dist: { 1: 0.2, 2: 0.4, 3: 0.4 }
