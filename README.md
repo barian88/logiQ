@@ -28,6 +28,18 @@ The platform includes a cross-platform client for learners, a powerful backend s
 * 🔌 **High-Performance RESTful API**: Built with **Go and Gin framework**, utilizing **MongoDB** for robust persistence and **Redis** for high-speed caching. Achieved **89% unit and API test coverage**.
 * 🚀 **Automated CI/CD Pipeline**: Streamlined workflows using **GitHub Actions** to automate Docker image builds, tests, and pushes to container registries (GHCR / AWS ECR), enabling version-controlled, reproducible deployments.
 
+## 📸 Screenshots
+
+<div align="center">
+  <img src="assets/screenshots/Picture 1.png" width="30%" />
+  <img src="assets/screenshots/Picture 2.png" width="30%" />
+  <img src="assets/screenshots/Picture 3.png" width="30%" />
+</div>
+<br/>
+<div align="center">
+  <img src="assets/screenshots/Picture 4.png" width="100%" />
+</div>
+
 ## 🏗️ System Architecture
 
 LogiQ utilizes a decoupled architecture communicating over RESTful APIs.
