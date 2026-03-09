@@ -45,12 +45,12 @@ LogiQ utilizes a decoupled architecture communicating over RESTful APIs.
 ### Component Interaction Diagram
 
 ```mermaid
-graph TD;
-    Client[Flutter Client\n(Learners)] -->|HTTP/REST| API[Go Gin API\n(Backend)]
-    Admin[React Admin Dashboard\n(Administrators)] -->|HTTP/REST| API
+graph TD
+    Client["Flutter Client<br/>(Learners)"] -->|HTTP/REST| API["Go Gin API<br/>(Backend)"]
+    Admin["React Admin Dashboard<br/>(Administrators)"] -->|HTTP/REST| API
     API -->|Read/Write| DB[(MongoDB)]
     API -->|Cache| Cache[(Redis)]
-    API <--> Engine[AST Generation Engine]
+    API <--> Engine["AST Generation Engine"]
 ```
 
 *(Additional diagrams available in the `report/latex/img/` directory: [ER Diagram](report/latex/img/ER-diagram.png), [Task Generation Flow](report/latex/img/Task-Generation-Flow.png), [User Management Flow](report/latex/img/User-Management-flow.png))*
